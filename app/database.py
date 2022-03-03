@@ -6,6 +6,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 import time
 
+#tester comment
 
 SQLALCHEMY_DATABASE_URL = "postgresql://postgres:password123@localhost/fastAPI"
 # SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"
