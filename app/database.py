@@ -5,10 +5,10 @@ from sqlalchemy.orm import sessionmaker
 import psycopg2
 from psycopg2.extras import RealDictCursor
 import time
-
+from .config import settings
 #tester comment
 
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:password123@localhost/fastAPI"
+SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
 # SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
